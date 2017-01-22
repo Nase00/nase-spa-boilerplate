@@ -9,7 +9,6 @@ module.exports = {
   resolve: base.resolve,
   module: base.module,
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
@@ -22,8 +21,7 @@ module.exports = {
       compressor: {
         warnings: false
       }
-    }),
-    new webpack.optimize.DedupePlugin()
+    })
   ],
   devtool: 'cheap-module-source-map'
 };
