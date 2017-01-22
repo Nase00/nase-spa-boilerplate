@@ -14,24 +14,28 @@ module.exports = {
     publicPath: '/dist/'
   },
   resolve: {
-    root: baseContext,
+    modules: [baseContext, 'node_modules'],
     alias: {
       universal: path.resolve(universalContext)
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js(x|)?$/,
-        loader: 'babel-loader?plugins[]=transform-object-rest-spread',
-        includes: [baseContext, universalContext],
+        use: {
+          loader: 'babel-loader?plugins[]=transform-object-rest-spread'
+        },
+        include: [baseContext, universalContext],
         exclude: /node_modules/
       },
       {
         test: /\.(svg|png)$/,
-        loader: 'file-loader',
-        includes: [baseContext, environmentConext],
+        use: {
+          loader: 'file-loader'
+        },
+        include: [baseContext, environmentConext],
         exclude: /node_modules/
       }
     ]

@@ -1,6 +1,6 @@
 const merge = require('lodash/merge');
 
-const base = require('./karma.conf.base');
+const base = require('./karma.base.conf');
 
 module.exports = (config) => {
   const configuration = merge(base, {
@@ -9,7 +9,7 @@ module.exports = (config) => {
       type: 'lcov',
       dir: '../coverage/'
     },
-    webpack: require('../webpack/webpack.config.cov'),
+    webpack: require('../webpack/webpack.cov.config'),
     logLevel: config.LOG_INFO
   });
 
