@@ -1,5 +1,8 @@
+/* eslint import/no-extraneous-dependencies:0 */
 const webpack = require('webpack');
 const base = require('./webpack.config');
+
+// base.module.rules[0].use.options.plugins.push('react-hot-loader/babel');
 
 module.exports = {
   target: base.target,
@@ -7,8 +10,8 @@ module.exports = {
   entry: {
     app: [
       'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
-      'react-hot-loader/patch',
       'webpack/hot/only-dev-server',
+      'react-hot-loader/patch',
       base.entry
     ]
   },

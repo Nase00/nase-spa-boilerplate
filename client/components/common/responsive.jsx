@@ -1,4 +1,5 @@
-import { PropTypes } from 'react';
+/* eslint import/no-extraneous-dependencies:0, no-magic-numbers:0, max-nested-callbacks:0 */
+import PropTypes from 'prop-types';
 
 import { base } from '../../config/composition';
 

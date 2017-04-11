@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOMServer from 'react-dom/server';
 
 import { BUNDLE_PATH } from '../config';
@@ -17,7 +18,7 @@ const Application = ({ bundle }) => {
       </head>
       <body>
         <div id='root'/>
-        <script src={bundle}></script>
+        <script src={bundle}/>
       </body>
     </html>
   );

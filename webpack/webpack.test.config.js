@@ -1,3 +1,4 @@
+/* eslint import/no-extraneous-dependencies:0 */
 /* globals __dirname */
 const webpack = require('webpack');
 

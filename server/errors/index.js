@@ -1,3 +1,5 @@
+/* eslint import/prefer-default-export:0 */
+
 export class FileValidationError extends Error {
   constructor(fileName) {
     super(fileName);
