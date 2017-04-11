@@ -7,6 +7,8 @@ const baseContext = path.join(__dirname, '../client');
 const environmentConext = path.join(__dirname, '../environment');
 const universalContext = path.join(__dirname, '../universal');
 
+const babelRCPath = path.join(__dirname, '../.babelrc');
+
 module.exports = {
   context: baseContext,
   entry: '../client/index.jsx',
@@ -31,7 +33,7 @@ module.exports = {
 
           // Work-around to enable commonjs on server and native modules on client,
           // while (mostly) maintaining one source for Babel configuration
-          options: merge(JSON.parse(fs.readFileSync('./.babelrc')), {
+          options: merge(JSON.parse(fs.readFileSync(babelRCPath)), {
             babelrc: false,
             presets: [['es2015', { modules: false }], 'react']
           })

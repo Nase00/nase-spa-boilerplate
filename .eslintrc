@@ -21,17 +21,24 @@
     "react/jsx-indent": 0,
     "quotes": [2, "single"],
     "arrow-body-style": [2, "as-needed"],
+    "arrow-parens": [2, "always"],
     "func-style": [2, "expression"],
     "prefer-arrow-callback": [2, {
-      allowNamedFunctions: false,
-      allowUnboundThis: false,
+      "allowNamedFunctions": false,
+      "allowUnboundThis": false,
     }],
     "func-names": 2,
     "react/jsx-space-before-closing": [2, "never"],
     "react/prefer-es6-class": 2,
-    "jsx-quotes": [2, "prefer-single"],
+    "react/jsx-tag-spacing": [2, {
+      "closingSlash": "never",
+      "beforeSelfClosing": "never",
+      "afterOpening": "never"
+    }],
     "indent": [2, 2, {"SwitchCase": 1}],
     "no-invalid-this": 0,
+    "jsx-quotes": [2, "prefer-single"],
+    "react/forbid-prop-types": [2, {"forbid": ["any"]}],
     "react/jsx-closing-bracket-location": [2, "after-props"],
     "react/jsx-boolean-value": 0,
     "react/jsx-no-bind": 0,
@@ -43,7 +50,8 @@
     "no-param-reassign": 0,
     "consistent-return": 0,
     "default-case": 0,
-    "no-extra-parens": 0
+    "no-extra-parens": 0,
+    "import/extensions": 0
   },
   "globals": {
     "require": true

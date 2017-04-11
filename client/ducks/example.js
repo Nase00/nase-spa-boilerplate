@@ -2,6 +2,8 @@ import immutable from 'immutable';
 
 import { handleAction } from '../utils';
 
+export { push } from 'react-router-redux';
+
 const initialState = immutable.fromJS({
   helloWorldMessage: 'Hello, world!'
 });

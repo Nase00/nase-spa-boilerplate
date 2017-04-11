@@ -1,4 +1,5 @@
 /* eslint-env node, mocha */
+/* eslint import/no-extraneous-dependencies:0 */
 import React from 'react';
 import { mount } from 'enzyme';
 import expect from 'expect';

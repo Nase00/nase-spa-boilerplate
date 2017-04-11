@@ -1,6 +1,7 @@
 /* globals document */
 import React from 'react';
-import { Router, IndexRoute, Route } from 'react-router';
+import { Route } from 'react-router';
+import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
 
 import history from './config/history';
@@ -11,11 +12,11 @@ import ExampleContainer from './components/example/container';
 
 const Routes = () => (
   <Provider store={store}>
-    <Router history={history}>
-      <Route path='/' component={Body}>
-        <IndexRoute component={ExampleContainer}/>
-      </Route>
-    </Router>
+    <ConnectedRouter history={history}>
+      <Body location={history.location}>
+        <Route path='/' component={ExampleContainer}/>
+      </Body>
+    </ConnectedRouter>
   </Provider>
 );
 

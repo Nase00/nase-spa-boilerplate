@@ -1,4 +1,4 @@
-/* eslint no-console:0 */
+/* eslint no-console:0, import/no-extraneous-dependencies:0 */
 /* globals console */
 import express from 'express';
 // import favicon from 'serve-favicon';
@@ -29,7 +29,7 @@ if (process.env.HOT) {
   console.log(colors.bgRed('Hot reloading enabled'));
 }
 
-/* Remaining Express configuration */
+/* Express configuration */
 // server.use(favicon(`${PUBLIC_PATH}/favicon.ico`));
 server.use(cookieParser());
 server.use(logger('combined'));

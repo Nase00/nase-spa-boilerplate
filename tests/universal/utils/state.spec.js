@@ -1,5 +1,5 @@
 /* eslint-env node, mocha */
-/* eslint no-magic-numbers:0 max-nested-callbacks:0 */
+/* eslint import/no-extraneous-dependencies:0, no-magic-numbers:0, max-nested-callbacks:0 */
 import expect from 'expect';
 
 import { handleAction } from 'server/utils';

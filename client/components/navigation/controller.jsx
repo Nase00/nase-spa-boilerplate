@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+/* globals window, document */
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Header from './header';
 
@@ -25,7 +27,6 @@ class NavigationController extends Component {
 }
 
 NavigationController.propTypes = {
-  deviceWidth: PropTypes.number.isRequired,
   actions: PropTypes.shape({
     emitDeviceWidthUpdate: PropTypes.func.isRequired
   }).isRequired

@@ -3,6 +3,7 @@ import path from 'path';
 import { readFileSync } from 'fs';
 
 import validator from '../environment/validation';
+/* eslint import/prefer-default-export:0 */
 import { FileValidationError } from './errors';
 import mockEnvironment from '../environment/mock';
 
